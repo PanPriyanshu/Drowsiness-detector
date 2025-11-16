@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Drowsiness Detector</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header><h1>Drowsiness Detector</h1></header>
+
+    <div class="card">
+      <p>Drowsiness detector using MediaPipe FaceMesh</p>
+
+      <div class="controls">
+        <button id="startBtn">Start Camera</button>
+        <button id="stopBtn" class="stop" disabled>Stop</button>
+
+        <div class="sliders-row">
+          <div>
+            <label>EAR threshold: <span id="earVal">0.25</span></label>
+            <input id="earRange" type="range" min="0.12" max="0.40" step="0.01" value="0.25">
+          </div>
+          <div>
+            <label>Alert seconds: <span id="secVal">15</span>s</label>
+            <input id="secRange" type="range" min="3" max="30" step="1" value="15">
+          </div>
+          <button id="resetBtn" class="reset-btn">Reset</button>
+        </div>
+      </div>
+
+      <div>
+        <div id="status" class="status">Idle</div>
+        <canvas id="canvas" width="640" height="480"></canvas>
+        <video id="video" playsinline style="display:none;"></video>
+      </div>
+    </div>
+
+    <footer>
+      <small>Uses MediaPipe FaceMesh (CDN). Run on HTTPS / local server.</small>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

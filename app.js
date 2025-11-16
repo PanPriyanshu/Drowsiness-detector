@@ -1,4 +1,4 @@
-// simple drowsiness detector – MediaPipe FaceMesh
+// drowsiness detector – MediaPipe FaceMesh
 
 const $ = (id) => document.getElementById(id);
 

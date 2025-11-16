@@ -30,6 +30,11 @@ app.js
 Browsers don’t allow webcam usage on file://
 So you MUST run it using a local server.
 
+or you can use the direct link:
+https://panpriyanshu.github.io/Drowsiness-detector/
+
+if you want to run locally follow instructions:
+
 Option 1: Using Python
 python3 -m http.server
 
